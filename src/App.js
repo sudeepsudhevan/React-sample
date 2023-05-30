@@ -9,6 +9,7 @@
  */
 
 import {useState} from 'react';
+import Counter from './Counter';
 
 function App() {
   const [count,setCount]=useState(0); // [state,setState
@@ -28,7 +29,7 @@ function App() {
       
       <button onClick={addcount}>Increment</button>
       <button onClick={subcount}>Decrement</button>
-      <h1>Counter: {count}</h1>  
+      <Counter count={count}/> 
     </div>
   
     
