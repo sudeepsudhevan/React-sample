@@ -29,7 +29,8 @@ function App() {
       
       <button onClick={addcount}>Increment</button>
       <button onClick={subcount}>Decrement</button>
-      <Counter count={count}/> 
+      <Counter title='1st Counter' count={count}/>
+      <Counter title='2nd Counter' count={count}/> 
     </div>
   
     
