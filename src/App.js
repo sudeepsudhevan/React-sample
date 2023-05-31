@@ -8,29 +8,31 @@
  * 0", and two `button` elements with text "Increment" and "Decrement" respectively.
  */
 
-import {useState} from 'react';
-import Counter from './Counter';
+
+import Employee from './Employee';
+
 
 function App() {
-  const [count,setCount]=useState(0); // [state,setState
+  
+  
+  
+  let emp = [{name:'John',age:25},
+  {name:'steve',age:30},
+  {name:'Mike',age:28}];
 
 
-  const addcount=()=>{
-    setCount(count+1);
-    console.log(count);
-  }
-  const subcount=()=>{
-    setCount(count-1);
-    console.log(count);
-  }
   return (
     <div className="App">
       
       
-      <button onClick={addcount}>Increment</button>
-      <button onClick={subcount}>Decrement</button>
-      <Counter title='1st Counter' count={count}/>
-      <Counter title='2nd Counter' count={count}/> 
+      
+      {
+        emp.map((obj,index)=>
+          (
+            <Employee key={index} {...obj}/> 
+          )
+        )
+      }
     </div>
   
     
